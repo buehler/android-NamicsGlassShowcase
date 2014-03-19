@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import com.google.android.glass.touchpad.Gesture;
 import com.google.android.glass.touchpad.GestureDetector;
 import com.namics.glassshowcase.nespressocapsuleinformation.R;
+import com.namics.glassshowcase.nespressocapsuleinformation.capsuleinformation.CapsuleInformation;
 import com.namics.glassshowcase.nespressocapsuleinformation.helpers.Callable;
 import com.namics.glassshowcase.nespressocapsuleinformation.imagerecognition.CameraPreview;
 
@@ -21,6 +24,8 @@ public class MainActivity extends Activity {
     private CameraPreview cameraView;
     private GestureDetector gestureDetector;
 
+    private ImageView crosshair;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,10 +34,24 @@ public class MainActivity extends Activity {
 
         createGestureDetector();
 
+        crosshair = (ImageView)findViewById(R.id.camera_preview_crosshair);
+
         cameraView = new CameraPreview(this);
         previewContainer = (FrameLayout) findViewById(R.id.camera_preview);
 
         previewContainer.addView(cameraView);
+
+        cameraView.setCapsuleFoundCallback(new Callable<Boolean, Void>(){
+            @Override
+            public Void call(Boolean foundCapsule) {
+                if(foundCapsule){
+                    crosshair.setImageResource(R.drawable.capsule_found);
+                } else {
+                    crosshair.setImageResource(R.drawable.no_capsule_found);
+                }
+                return null;
+            }
+        });
     }
 
     @Override
@@ -115,6 +134,7 @@ public class MainActivity extends Activity {
 
     private void showInformation(){
         final Context that = this;
+
         cameraView.getPixelColor(new Callable<Integer,Void>(){
             @Override
             public Void call(Integer param) {
@@ -124,5 +144,6 @@ public class MainActivity extends Activity {
                 return null;
             }
         });
+
     }
 }

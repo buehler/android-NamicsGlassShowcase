@@ -10,7 +10,6 @@ public class CapsuleInformation {
         BLACK,
         RED,
         BLUE,
-        GREEN,
         WHITE
     }
 
@@ -57,11 +56,12 @@ public class CapsuleInformation {
         int g = (colorCode >> 8) & 0xff;
         int b = colorCode & 0xff;
 
-        /*if((0 <= r && r <= 51) && (0 <= g && g <= 51) && (0 <= b && b <= 51)){
-            return new Ristretto();
-        }*/
-
-        return new Ristretto();
+        switch (getCapsuleColorForPixelColor(colorCode)){
+            case BLACK:
+                return new Ristretto();
+            default:
+                return new Ristretto();
+        }
     }
 
     public static class Ristretto extends CapsuleInformation{
@@ -75,5 +75,23 @@ public class CapsuleInformation {
             intensity = 10;
             imageResource = R.drawable.ristretto_capsule;
         }
+    }
+
+    private static boolean isInRange(int is, int should){
+        int min = should - (255 / 100 * 20);
+        int max = should + (255 / 100 * 20);
+        return (is >= min && is <= max);
+    }
+
+    public static CapsuleColor getCapsuleColorForPixelColor(int pixelColor){
+        int r = (pixelColor >> 16) & 0xff;
+        int g = (pixelColor >> 8) & 0xff;
+        int b = pixelColor & 0xff;
+
+        if (isInRange(r, 11) && isInRange(g, 17) && isInRange(b, 17)) return CapsuleColor.BLACK;
+        if (isInRange(r, 114) && isInRange(g, 104) && isInRange(b, 72)) return CapsuleColor.WHITE;
+        if (isInRange(r, 25) && isInRange(g, 55) && isInRange(b, 97)) return CapsuleColor.BLUE;
+        if (isInRange(r, 125) && isInRange(g, 24) && isInRange(b, 16)) return CapsuleColor.RED;
+        return null;
     }
 }

@@ -12,16 +12,11 @@
         android:layout_alignParentLeft="true"
         android:id="@+id/camera_preview" />
 
-    <View
+    <ImageView
         android:layout_width="20dp"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_red_dark"
-        android:layout_centerInParent="true" />
-
-    <View
-        android:layout_width="1dp"
         android:layout_height="20dp"
-        android:background="@android:color/holo_red_dark"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:id="@+id/camera_preview_crosshair"
+        android:src="@drawable/no_capsule_found" />
 
 </RelativeLayout>
