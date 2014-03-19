@@ -11,7 +11,6 @@ public class CapsuleInformationActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        android.os.Debug.waitForDebugger();
         Intent intent = getIntent();
         int color = intent.getIntExtra("PixelColor", -1);
 

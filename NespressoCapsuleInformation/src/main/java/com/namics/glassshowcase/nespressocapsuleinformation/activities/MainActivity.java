@@ -26,24 +26,21 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //android.os.Debug.waitForDebugger();
 
-        setContentView(new CapsuleInformationScrollView(this, 0));
-
-        /*setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
         createGestureDetector();
 
         cameraView = new CameraPreview(this);
         previewContainer = (FrameLayout) findViewById(R.id.camera_preview);
 
-        previewContainer.addView(cameraView);*/
+        previewContainer.addView(cameraView);
     }
 
     @Override
     protected void onResume()    {
         super.onResume();
-/*
+
         // Do not hold the camera during onResume
         if (cameraView != null)
         {
@@ -52,7 +49,7 @@ public class MainActivity extends Activity {
 
         // Set the view
         previewContainer.removeAllViews();
-        previewContainer.addView(cameraView);*/
+        previewContainer.addView(cameraView);
     }
 
     @Override
@@ -60,15 +57,15 @@ public class MainActivity extends Activity {
     {
         super.onPause();
 
-        /*// Do not hold the camera during onPause
+        // Do not hold the camera during onPause
         if (cameraView != null)
         {
             cameraView.releaseCamera();
         }
-        previewContainer.removeAllViews();*/
+        previewContainer.removeAllViews();
     }
 
-   /* @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -129,5 +126,5 @@ public class MainActivity extends Activity {
                 return null;
             }
         });
-    }*/
+    }
 }
