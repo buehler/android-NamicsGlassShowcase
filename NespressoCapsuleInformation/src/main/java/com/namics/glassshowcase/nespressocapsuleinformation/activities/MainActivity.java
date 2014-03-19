@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
     private GestureDetector gestureDetector;
 
     private ImageView crosshair;
+    private boolean capsuleFound = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MainActivity extends Activity {
         cameraView.setCapsuleFoundCallback(new Callable<Boolean, Void>(){
             @Override
             public Void call(Boolean foundCapsule) {
+                capsuleFound = foundCapsule;
                 if(foundCapsule){
                     crosshair.setImageResource(R.drawable.capsule_found);
                 } else {
@@ -131,6 +133,7 @@ public class MainActivity extends Activity {
     }
 
     private void showInformation(){
+        if(!capsuleFound) return;
         final Context that = this;
 
         cameraView.getPixelColor(new Callable<Integer,Void>(){
