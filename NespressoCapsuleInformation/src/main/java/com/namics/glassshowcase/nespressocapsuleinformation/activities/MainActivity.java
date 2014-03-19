@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -13,7 +12,6 @@ import android.widget.FrameLayout;
 import com.google.android.glass.touchpad.Gesture;
 import com.google.android.glass.touchpad.GestureDetector;
 import com.namics.glassshowcase.nespressocapsuleinformation.R;
-import com.namics.glassshowcase.nespressocapsuleinformation.controls.CapsuleInformationScrollView;
 import com.namics.glassshowcase.nespressocapsuleinformation.helpers.Callable;
 import com.namics.glassshowcase.nespressocapsuleinformation.imagerecognition.CameraPreview;
 
