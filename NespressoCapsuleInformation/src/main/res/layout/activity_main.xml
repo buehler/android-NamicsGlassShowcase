@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.namics.glassshowcase.nespressocapsuleinformation.activities.MainActivity">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/camera_preview" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.namics.glassshowcase.nespressocapsuleinformation.activities.MainActivity" >
+
+    <item
+        android:id="@+id/capture"
+        android:title="capture" />
+    <item
+        android:id="@+id/close"
+        android:title="close" />
+</menu>

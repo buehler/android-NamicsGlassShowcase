@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">blub</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="activity_main_introduction">hello there, please use the settings to start image capturing (if you returned without accepting the image, you can start it again there)</string>
+    <string name="activity_main_processingImageText">processing image...</string>
+    <string name="activity_main_voice_trigger">show nespresso information</string>
+    <string name="title_activity_capsule_information">CapsuleInformationActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
