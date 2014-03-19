@@ -71,8 +71,8 @@ public class CapsuleInformation {
     }
 
     private static boolean isInRange(int is, int should){
-        int min = should - (255 / 100 * 20);
-        int max = should + (255 / 100 * 20);
+        int min = should - (255 / 100 * 25);
+        int max = should + (255 / 100 * 25);
         return (is >= min && is <= max);
     }
 
