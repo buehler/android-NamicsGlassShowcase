@@ -19,7 +19,18 @@
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
         android:id="@+id/camera_preview"
-        android:layout_below="@+id/textView" />
+        android:layout_below="@+id/textView" >
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/editText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="right|top"
+        android:layout_alignTop="@+id/camera_preview" />
 
     <View
         android:layout_width="20dp"
@@ -32,5 +43,13 @@
         android:layout_height="20dp"
         android:background="@android:color/holo_red_dark"
         android:layout_centerInParent="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
