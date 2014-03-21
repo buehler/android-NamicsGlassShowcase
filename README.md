@@ -65,7 +65,7 @@ public class CapsuleInformationScrollView extends CardScrollView {
 
 - Coding an application for google glass is not as hard as it sounds, if you have certain knowledge about coding applications for android
 - Immersions provide the most flexibility for the UI but are the hardest to implement
-- CardScrollView uses simple views that can be inflated with the LayoutInflater and saved into a list
+- [CardScrollView](https://developers.google.com/glass/develop/gdk/reference/com/google/android/glass/widget/CardScrollView) uses simple views that can be inflated with the LayoutInflater and saved into a list
 - “ok glass” menu is not accessable in the GDK for now :(   [source](http://stackoverflow.com/questions/20133577/adding-the-ok-glass-contextual-voice-menu-within-an-immersion-activity/20134647#20134647)
 - Accessing any hardware features like the camera is exactly as you would do in android
 
