@@ -53,7 +53,7 @@ With the recognition working, the next step was to design an immersion (focused 
 - Input: “DPad”
 - Ram: 682 mb
 
-The hardest part was to show a timeline alike view where the user is able to scroll through a capsule’s information. Herefore, a CardScrollView is used, which delivers view by view to scroll through.
+The hardest part was to show a timeline alike view where the user is able to scroll through a capsule’s information. Herefore, a [CardScrollView](https://developers.google.com/glass/develop/gdk/reference/com/google/android/glass/widget/CardScrollView) is used, which delivers view by view to scroll through.
 
 ```java
 public class CapsuleInformationScrollView extends CardScrollView {
