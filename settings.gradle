@@ -1,1 +1,1 @@
-include ':NamicsLiveWordmark', ':NespressoCapsuleInformation', ':ColorRecognition'
+include ':NamicsLiveWordmark', ':NespressoCapsuleInformation', ':ColorRecognition', ':NineGag'
