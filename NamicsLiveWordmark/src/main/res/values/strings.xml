@@ -1,7 +1,0 @@
-<resources>
-
-    <string name="app_name">NamicsLiveWordmarks</string>
-	<string name="glass_voice_trigger">start wordmark tile</string>
-	<string name="stop">stop</string>
-
-</resources>
