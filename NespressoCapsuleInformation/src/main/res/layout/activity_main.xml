@@ -13,8 +13,8 @@
         android:id="@+id/camera_preview" />
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="150px"
+        android:layout_height="150px"
         android:layout_centerInParent="true"
         android:id="@+id/camera_preview_crosshair"
         android:src="@drawable/no_capsule_found" />
