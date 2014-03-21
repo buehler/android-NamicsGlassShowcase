@@ -10,12 +10,14 @@ import com.namics.glassshowcase.ninegag.controls.NineGagTimeline;
 
 public class MainActivity extends Activity {
 
+    private NineGagTimeline timeline;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(new NineGagTimeline(this));
+        timeline = new NineGagTimeline(this);
+        setContentView(timeline);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -31,7 +33,11 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.close) {
+            finish();
+            return true;
+        } else if (id == R.id.next_page){
+            timeline.getNextPage();
             return true;
         }
         return super.onOptionsItemSelected(item);

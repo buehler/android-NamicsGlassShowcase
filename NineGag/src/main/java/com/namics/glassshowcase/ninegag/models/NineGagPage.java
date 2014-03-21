@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class NineGagPage {
 
-    private ArrayList<NineGagJoke> data;
+    private ArrayList<NineGagJoke> data = new ArrayList<NineGagJoke>();
     private String nextId;
 
     public NineGagPage(JSONObject json){

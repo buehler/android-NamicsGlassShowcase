@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.namics.glassshowcase.ninegag" >
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -9,6 +11,12 @@
         <activity
             android:name="com.namics.glassshowcase.ninegag.activities.MainActivity"
             android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/glass_voice_trigger" />
         </activity>
     </application>
 
