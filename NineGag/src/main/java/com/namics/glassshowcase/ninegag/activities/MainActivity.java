@@ -6,13 +6,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.namics.glassshowcase.ninegag.R;
+import com.namics.glassshowcase.ninegag.controls.NineGagTimeline;
 
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(new NineGagTimeline(this));
     }
 
 
