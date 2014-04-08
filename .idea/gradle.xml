@@ -7,11 +7,11 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/ColorRecognition" />
-            <option value="$PROJECT_DIR$/NamicsLiveWordmark" />
-            <option value="$PROJECT_DIR$/NespressoCapsuleInformation" />
-            <option value="$PROJECT_DIR$/NineGag" />
+            <option value="C:\Development\MobileForumGlassShowcase\NamicsGlassShowcase" />
+            <option value="C:\Development\MobileForumGlassShowcase\NamicsGlassShowcase\ColorRecognition" />
+            <option value="C:\Development\MobileForumGlassShowcase\NamicsGlassShowcase\NamicsLiveWordmark" />
+            <option value="C:\Development\MobileForumGlassShowcase\NamicsGlassShowcase\NespressoCapsuleInformation" />
+            <option value="C:\Development\MobileForumGlassShowcase\NamicsGlassShowcase\NineGag" />
           </set>
         </option>
       </GradleProjectSettings>
