@@ -43,7 +43,16 @@ Actually, this is an android phone project. It's kind of a "proof of concept" to
 
 #### NespressoCapsuleInformation
 
-Now this is the project you want to know about. The purpose of the application is to determine a specific Nespresso capsule under a certain crosshair and show some information about it. My approach was to show a camera preview to the user with a small circle in the middle of the screen and then recognize the color below the circle. As a first idea an image recognition is initialized, but due to limited processor capacities of the glass and little amount of time, this was no option. Another approach was to send an image to a specific image recognition api and categorize the image. After some tests, the recognition was not as accurate as it was intended to be. Eventually, the approach is considered to regard a certain pixel and determine its color. With this possibility at hand, it is able - with a fairly big threshold - to determine the color of the object the user is pointing at.####SCREENS####
+Now this is the project you want to know about. The purpose of the application is to determine a specific Nespresso capsule under a certain crosshair and show some information about it. My approach was to show a camera preview to the user with a small circle in the middle of the screen and then recognize the color below the circle. As a first idea an image recognition is initialized, but due to limited processor capacities of the glass and little amount of time, this was no option. Another approach was to send an image to a specific image recognition api and categorize the image. After some tests, the recognition was not as accurate as it was intended to be. Eventually, the approach is considered to regard a certain pixel and determine its color. With this possibility at hand, it is able - with a fairly big threshold - to determine the color of the object the user is pointing at.
+
+No color recognized:
+![NonReco](https://raw.githubusercontent.com/buehler/NamicsGlassShowcase/screenshots/non_recognized.png)
+
+Color recognized:
+![Reco](https://raw.githubusercontent.com/buehler/NamicsGlassShowcase/screenshots/recognized.png)
+
+Capsule information:
+![Infos](https://raw.githubusercontent.com/buehler/NamicsGlassShowcase/screenshots/information.png)
 
 With the recognition working, the next step was to design an immersion (focused view in glass GUI). The provided capsule information are hardcoded in the app, because downloading information from the internet was out of scope and is fairly easy to implement for a proof of concept. Luckily, designing GUIs for glass is as simple as designing activities for any common android device. To provide an adequate UI you should design your activities with the following specifications:
 - Resolution: 640 x 360 px
